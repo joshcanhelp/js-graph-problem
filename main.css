@@ -1,0 +1,114 @@
+/*
+Helper and utility styles
+*/
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.stand-out {
+  background: #eee;
+}
+.result {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: green;
+}
+.error {
+  color: red;
+}
+input[type=submit] {
+  border: none;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 8px 16px;
+  background: #4e79be;
+  color: white;
+  font-size: 0.9em;
+}
+input[type=submit]:hover {
+  background: #6990d1;
+}
+/*
+Main styling
+*/
+body {
+  padding: 20px 0;
+  background: #eee;
+}
+h1 {
+  text-align: center;
+}
+p,
+li {
+  line-height: 1.4em;
+}
+hr {
+  border: none;
+  border-top: 1px #dddddd solid;
+  margin: 20px 0;
+}
+.wrapper {
+  border-radius: 3px;
+  border: 1px #dddddd solid;
+  box-shadow: 0 1px 3px #ccc;
+  padding: 20px;
+  background: white;
+  margin: 0 auto;
+  max-width: 600px;
+}
+ul.columned {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.columned li {
+  float: left;
+  padding: 1% 0;
+  width: 32%;
+  margin: 0 1% 1% 0;
+}
+ul.columned li.colspan-2 {
+  width: 64%;
+}
+ul.columned li.stand-out {
+  text-align: center;
+}
+form li {
+  text-align: left;
+}
+form label {
+  display: block;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 0 0 4px;
+  text-align: left;
+}
+form input[type=text],
+form input[type=number] {
+  display: block;
+  width: 86%;
+  border: 1px #dddddd solid;
+  padding: 6px;
+}
+form .result {
+  text-align: left;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+/*
+Media queries
+*/
+@media (max-width: 640px) {
+  .wrapper {
+    border: none;
+    border-top: 1px #dddddd solid;
+    border-bottom: 1px #dddddd solid;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}

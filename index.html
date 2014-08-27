@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rail Calculator - JS Graph Problem</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body class="stand-out">
+
+	<div class="wrapper">
+
+		<h1>Rail Calculator - JS Graph Problem</h1>
+
+		<hr>
+
+		<h2>Set routes</h2>
+		<p>Current routes for this rail system are:</p>
+		<ul id="current-routes" class="columned cf"></ul>
+
+		<h2>Add Route</h2>
+		<p>Add a route to this system. Use the single-digit code for the start and end towns and an integer for the distance. Note that city codes are capitalization-sensitive.</p>
+		<form id="add-route-form">
+			<ul class="columned cf">
+				<li>
+					<label for="start-town">Start</label>
+					<input type="text" maxlength="1" name="start-town" id="start-town" required>
+				</li>
+				<li>
+					<label for="end-town">End</label>
+					<input type="text" maxlength="1" name="end-town" id="end-town" required>
+				</li>
+				<li>
+					<label for="distance">Distance</label>
+					<input type="number" name="distance" id="distance" required>
+				</li>
+			</ul>
+			<input type="submit" value="Save">
+		</form>
+
+		<hr>
+
+		<h2>Distance</h2>
+		<p>Enter a route of town codes separated by dashes to calculate the total distance.</p>
+
+		<form id="route-distance-form">
+			<ul class="columned cf">
+				<li class="colspan-2">
+					<label for="calc-distance-route">Start</label>
+					<input type="text" name="calc-distance-route" id="calc-distance-route" required>
+				</li>
+				<li>
+					<label>Distance:</label>
+					<span id="calc-distance-result" class="result"></span>
+				</li>
+			</ul>
+			<input type="submit" value="Calculate">
+		</form>
+
+		<hr>
+
+		<h2>Total Routes by Stops</h2>
+		<p>Enter 2 towns and a number of stops to calculate the number of routes between them.</p>
+
+		<form id="routes-by-stops">
+			<ul class="columned cf">
+				<li>
+					<label for="start-town-stops">Start</label>
+					<input type="text" maxlength="1" name="start-town-stops" id="start-town-stops" required>
+				</li>
+				<li>
+					<label for="end-town-stops">End</label>
+					<input type="text" maxlength="1" name="end-town-stops" id="end-town-stops" required>
+				</li>
+				<li>
+					<label for="number-stops">Number of stops</label>
+					<input type="number" min="1" max="30" name="number-stops" id="number-stops" required>
+				</li>
+				<li>
+					<input type="submit" value="Calculate">
+				</li>
+				<li>
+					<label for="exact-stops">Exact?</label>
+					<input type="checkbox" name="exact-stops" id="exact-stops" value="1">
+				</li>
+				<li>
+					<label># of routes:</label>
+					<span id="calc-route-stops-result" class="result"></span>
+				</li>
+			</ul>
+
+		</form>
+
+		<hr>
+
+		<h2>Shortest Route</h2>
+
+		<p>Enter 2 towns to find the shortest distance between them.</p>
+
+		<form id="route-shortest">
+			<ul class="columned cf">
+				<li>
+					<label for="calc-shortest-start">Start</label>
+					<input type="text" name="calc-shortest-start" id="calc-shortest-start" required>
+				</li>
+				<li>
+					<label for="calc-shortest-end">End</label>
+					<input type="text" name="calc-shortest-end" id="calc-shortest-end" required>
+				</li>
+				<li>
+					<label>Distance:</label>
+					<span id="calc-shortest-result" class="result"></span>
+				</li>
+			</ul>
+			<input type="submit" value="Calculate">
+		</form>
+
+		<hr>
+
+		<h2>Total Routes by Distance</h2>
+
+		<p>Enter 2 towns and a maximum distance to calculate the number of routes between them.</p>
+
+		<form id="routes-by-distance">
+			<ul class="columned cf">
+				<li>
+					<label for="start-town-distance">Start</label>
+					<input type="text" maxlength="1" name="start-town-distance" id="start-town-distance" required>
+				</li>
+				<li>
+					<label for="end-town-distance">End</label>
+					<input type="text" maxlength="1" name="end-town-distance" id="end-town-distance" required>
+				</li>
+				<li>
+					<label for="max-distance">Maximum distance</label>
+					<input type="number" min="1" max="100" name="max-distance" id="max-distance" required>
+				</li>
+				<li>
+					<input type="submit" value="Calculate">
+				</li>
+				<li class="colspan-2">
+					<label># of routes:</label>
+					<span id="calc-route-distance-result" class="result"></span>
+				</li>
+			</ul>
+
+		</form>
+
+	</div>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+	<script src="graph.js"></script>
+	<script src="ui.js"></script>
+</body>
+</html>
