@@ -4,4 +4,4 @@ I was recently posed a question regarding graphing problems in JavaScript. I sol
 
 No guarantees as to the accuracy of these calculations. I accept any and all feedback, issues and pull requests to create a good resource. 
 
-[This is running here](http://js.joshcanhelp.com/graph/)
+[This is running here](http://js.joshcanhelp.com/js-graph-problem/)
